@@ -1,0 +1,29 @@
+<div class="container mx-auto p-5">
+  <div class="title font-bold text-3xl text-center mb-3 relative">
+    CELLULAR AUTOMATON
+    <button class="bg-green-500 text-white text-sm px-2 rounded-full absolute top-0 m-2" (click)="selectComponent(4)">?</button>
+  </div>
+  <div class="button-group flex justify-center mb-3">
+    <div class="button-wrapper m-3">
+      <button class="btn py-2 px-4 hover:bg-[#1dafff] bg-[#1da1f2] text-white rounded" (click)="selectComponent(1)">Game
+        life</button>
+    </div>
+    <div class="button-wrapper m-3">
+      <button class="btn py-2 px-4 hover:bg-[#1dafff] bg-[#1da1f2] text-white rounded"
+        (click)="selectComponent(2)">Wireworld</button>
+    </div>
+    <div class="button-wrapper m-3">
+      <button class="btn py-2 px-4 hover:bg-[#1dafff] bg-[#1da1f2] text-white rounded"
+        (click)="selectComponent(3)">Cyclic celullar automaton</button>
+    </div>
+  </div>
+  <div [ngSwitch]="selectedComponent">
+    <app-game-life *ngSwitchCase="1"></app-game-life>
+    <app-wireworld *ngSwitchCase="2"></app-wireworld>
+    <app-cyclic-celullar-automaton *ngSwitchCase="3"></app-cyclic-celullar-automaton>
+    <app-info *ngSwitchCase="4"></app-info>
+    <div *ngSwitchDefault class="text-center text-gray-600">Please select a cellular automaton</div>
+  </div>
+</div>
+
+

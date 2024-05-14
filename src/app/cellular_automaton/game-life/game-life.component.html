@@ -1,0 +1,24 @@
+<div class="flex flex-col md:flex-row gap-4">
+  <div class="flex-1">
+    <div class="mb-2">
+      <span class="block text-gray-700 font-bold mb-1">Options:</span>
+      <button (click)="generateMap()"
+        class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded mr-2 w-full my-1">Empty</button>
+      <button (click)="generateMap(true)"
+        class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded mr-2 w-full my-1">Random</button>
+      <button (click)="addFigure(1)"
+        class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded mr-2 w-full my-1">Butterfly</button>
+      <button (click)="addFigure(0)"
+        class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded w-full my-1">Canyon</button>
+    </div>
+    <div class="flex justify-center">
+      <button [disabled]="isRunning" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-2"
+        (click)="start()">Start</button>
+      <button [disabled]="!isRunning" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+        (click)="stop()">Stop</button>
+    </div>
+  </div>
+  <div class="flex-1">
+    <canvas width="1000" class="cursor-pointer" #canvas height="600" style="border: 1px solid black"></canvas>
+  </div>
+</div>
