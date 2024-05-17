@@ -142,8 +142,13 @@ export class GameLifeComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   private putCell(e: MouseEvent) {
-    const offsetX = e.offsetX;
-    const offsetY = e.offsetY;
+    const canvas = e.currentTarget as HTMLCanvasElement;
+
+    const canvasWidth = canvas.clientWidth;
+    const canvasHeight = canvas.clientHeight;
+
+    const offsetX = (e.offsetX / canvasWidth) * canvas.width;
+    const offsetY = (e.offsetY / canvasHeight) * canvas.height;
 
     const cellX = Math.floor(offsetX / this.pixels);
     const cellY = Math.floor(offsetY / this.pixels);

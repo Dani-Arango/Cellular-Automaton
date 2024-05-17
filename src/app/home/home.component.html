@@ -1,20 +1,20 @@
 <div class="container mx-auto p-5">
-  <div class="title font-bold text-3xl text-center mb-3 relative">
+  <div class="title font-bold text-lg md:text-xl text-center mb-3 relative">
     CELLULAR AUTOMATON
-    <button class="bg-green-500 text-white text-sm px-2 rounded-full absolute top-0 m-2" (click)="selectComponent(4)">?</button>
+    <button class="bg-green-500 text-white text-sm px-2 rounded-full absolute top-0 m-2" title="Info" (click)="selectComponent(4)">?</button>
   </div>
-  <div class="button-group flex justify-center mb-3">
-    <div class="button-wrapper m-3">
-      <button class="btn py-2 px-4 hover:bg-[#1dafff] bg-[#1da1f2] text-white rounded" (click)="selectComponent(1)">Game
-        life</button>
+  <div class="button-group flex flex-col md:flex-row justify-center mb-3">
+    <div class="button-wrapper m-1">
+      <button class="btn md:w-[20vw] h-full w-full py-2 px-4 hover:bg-[#1dafff] bg-[#1da1f2] text-white rounded" (click)="selectComponent(1)">Game
+        Life</button>
     </div>
-    <div class="button-wrapper m-3">
-      <button class="btn py-2 px-4 hover:bg-[#1dafff] bg-[#1da1f2] text-white rounded"
-        (click)="selectComponent(2)">Wireworld</button>
+    <div class="button-wrapper m-1">
+      <button class="btn md:w-[20vw] h-full w-full py-2 px-4 hover:bg-[#1dafff] bg-[#1da1f2] text-white rounded"
+        (click)="selectComponent(2)">WireWorld</button>
     </div>
-    <div class="button-wrapper m-3">
-      <button class="btn py-2 px-4 hover:bg-[#1dafff] bg-[#1da1f2] text-white rounded"
-        (click)="selectComponent(3)">Cyclic celullar automaton</button>
+    <div class="button-wrapper m-1">
+      <button class="btn md:w-[20vw] h-full w-full py-2 px-4 hover:bg-[#1dafff] bg-[#1da1f2] text-white rounded"
+        (click)="selectComponent(3)">Cyclic Celullar Automaton</button>
     </div>
   </div>
   <div [ngSwitch]="selectedComponent">

@@ -1,5 +1,5 @@
 <div class="flex flex-col md:flex-row gap-4">
-  <div class="flex-1">
+  <div class="flex-1 w-[70vw] mx-auto md:w-20 bg-gray-200 p-6">
     <div class="mb-2">
       <label for="pixels" class="block text-gray-700 font-bold mb-1">Pixel size:</label>
       <input type="number" min="1" [(ngModel)]="pixels" (ngModelChange)="pixels = $event" id="pixels"
@@ -13,17 +13,17 @@
     </div>
     <div>
       <button (click)="generateColorsMap();"
-        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        class="bg-blue-500 hover:bg-blue-700 w-full text-white font-bold py-2 px-4 rounded">
         Assign and randomize</button>
     </div>
     <div class="flex py-2">
-      <button [disabled]="isRunning" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-2"
+      <button [disabled]="isRunning" class="w-1/2 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-2"
         (click)="start()">Start</button>
-      <button [disabled]="!isRunning" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+      <button [disabled]="!isRunning" class="w-1/2 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
         (click)="stop()">Stop</button>
     </div>
   </div>
   <div class="flex-1">
-    <canvas width="1000" #canvas height="600" style="border: 1px solid black"></canvas>
+    <canvas width="1000" class="m-auto w-[80vw] h-[50vw] md:w-[62vw] md:h-[35vw] border border-black" #canvas height="600"></canvas>
   </div>
 </div>

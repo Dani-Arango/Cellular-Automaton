@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
     <div class="mb-6">
       <p class="text-lg font-bold">Un autómata celular es un modelo matemático compuesto por una grilla de celdas que pueden estar en diferentes estados, donde cada celda cambia de estado en función de reglas específicas basadas en los estados de las celdas vecinas. Este modelo se utiliza para simular fenómenos complejos a partir de reglas simples.</p>
     </div>
-    <div class="grid grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <div class="flex flex-col bg-gray-200 p-6">
         <img src="/assets/images/gamelife.png" alt="Game of Life" class="w-60 h-[150px] mx-auto mb-4">
         <h3 class="text-2xl font-bold">Game life</h3>
