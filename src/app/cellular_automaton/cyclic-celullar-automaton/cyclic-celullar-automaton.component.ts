@@ -10,7 +10,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 })
 export class CyclicCelullarAutomatonComponent implements OnInit {
   private interval: any;
-  public isRunning = false;
+  public isRunning: boolean = false;
   public cantColors: number;
 
   private copy: string[][] = [];
@@ -99,6 +99,12 @@ export class CyclicCelullarAutomatonComponent implements OnInit {
         }
       }
     }
+  }
+  public isDisabled(){
+    if(!this.cantColors || !this.pixels) return true;
+    if(this.pixels > 50 || this.pixels < 5) return true;
+    if(this.cantColors > this.colors.length || this.cantColors < 1) return true;
+    return false;
   }
 
   public stop() {
